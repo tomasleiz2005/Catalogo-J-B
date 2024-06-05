@@ -12,8 +12,8 @@
     width: 100%;
     align-items: center;
     list-style-type: none;
-    background-image: url("C:/Users/betye/OneDrive/Escritorio/DW/Catalogos/Patagonia.jpg");
-    background-size: cover; /* o 100% 100% para mantener la proporció */
+    background-image: url("https://github.com/tomasleiz2005/Catalogo-J-B/blob/main/styles.css");
+    background-size: cover; /* o 100% 100% para mantener la proporción */
     background-repeat: no-repeat; /* para evitar que se repita la imagen */
       
 }
