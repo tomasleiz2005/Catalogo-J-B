@@ -1,0 +1,297 @@
+.header {
+    width: 30%;
+    height: 10%;
+    padding-bottom: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: first baseline;
+    border-radius: 150%;
+}
+.body {
+    width: 100%;
+    align-items: center;
+    list-style-type: none;
+    background-image: url("C:/Users/betye/OneDrive/Escritorio/DW/Catalogos/Patagonia.jpg");
+    background-size: cover; /* o 100% 100% para mantener la proporció */
+    background-repeat: no-repeat; /* para evitar que se repita la imagen */
+      
+}
+.buttonJACOFER {
+    background-color: rgb(255, 237, 237);
+    margin: 20px;
+}
+.buttonMOZART {
+    background-color: black;
+    margin: 20px;
+}
+.buttonAleba {
+    background-color: black;
+    margin: 20px;
+}
+.buttonBTM {
+    background-color: rgb(194, 195, 196);
+    margin: 20px;
+}
+.buttonElectrocable {
+    background-color: #f5a2a2;
+}
+.buttonElTrebol {
+    background-color: #000000;
+}
+.buttonEMTOP {
+    background-color: rgb(189, 21, 21);
+}
+.buttonKING {
+    background-color: #000000;
+}
+.buttonLCDR {
+    background-color: rgb(248, 248, 2);
+}
+.buttonMyM {
+    background-color: black;
+}
+.buttonMozart {
+    background-color: black;
+}
+.buttonPlasticual {
+    background-color: rgb(0, 119, 139);
+}
+.buttonTromen {
+    background-color: rgb(0, 0, 0);
+}
+.imageAleba {
+    width: 200px;
+    height: 100px;
+    border-radius: 25%;
+}
+.imageBTM {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageCables {
+    width: 200px;
+    height: 100px;
+    border-radius: 20%;
+}
+.imageCalor {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageDistritech {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageElectrocable {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageElRey {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageElTrebol {
+    width: 200px;
+    height: 100px;
+    border-radius: 20%;
+}
+.imageEMTOP {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageEscalerasLepar {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageGP {
+    width: 200px;
+    height: 100px;
+    border-radius: 25%;
+}
+.imageInducor {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageJACOFER {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageJOMA {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageKING {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageLCDR {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageLedvance {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageLitex {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageMyM {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageMarbia {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageMcPin {
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+}
+.imageMorano {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageMozart {
+    width: 200px;
+    height: 200px;
+    border-radius: 30%;
+}
+.imagePlasticual {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imagePoliArk {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageStihl {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageTavito {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageTreine {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageTromen {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.imageZM {
+    width: 200px;
+    height: 100px;
+    border-radius: 30%;
+}
+.li {
+    text-align: center;
+    list-style-type: none;
+    align-content: normal;
+}
+.li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #000000;
+}
+.li a:hover {
+    border-radius: 50%;
+    border-top-right-radius: 170%;
+    background-color: rgb(81, 88, 15); /* Cambia el color de fondo cuando pasas el mouse sobre los enlaces */
+    width: 50%;
+    margin-left: 500px;
+}
+.ul {
+    width: 150%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(52, 173, 243);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    color: rgb(145, 14, 14);
+    border: 1px;
+    border-radius: 30%;
+    border-start-start-radius: 20%;
+    border-end-end-radius: 50%;
+    border-start-end-radius: 50%;
+}
+.ul button {
+    display: flex;
+    justify-content: first baseline;
+    background-color: rgb(52, 173, 243);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    color: rgb(145, 14, 14);
+    border: 1px;
+    border-radius: 50%;
+}
+.ul header {
+    border-radius: 150%;
+    width: 70%;
+}
+.ul li {
+    list-style-type: none;
+    text-align: center;
+    align-content: normal;
+}
+.ul li button:hover {
+    background-color: rgb(250, 252, 231);
+    border-style: none;
+}
+.p {
+    block-size: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    color: rgb(255, 227, 227);
+    text-align: right;
+    margin: 0px;
+    margin-top: 100px;
+    padding: 0px;
+    font-size: x-large;
+}
+.li button {
+    border-radius: 30%;
+}
+.carousel-inner {
+    background-color: #000000;
+    height: 200px
+}
+.mozart {
+    background-color: #000000;
+    height: 200px;
+    width: 200px;
+    margin-left: 500px;
+}
+.Abrasol {
+    margin-left: 27px
+}
+.EMTOP {
+    margin-left: 200px;
+}
