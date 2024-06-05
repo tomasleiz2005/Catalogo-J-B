@@ -13,7 +13,7 @@
     align-items: center;
     list-style-type: none;
     background-image: url("Patagonia.jpg");
-    background-size: cover; /* o 100% 100% para mantener la proporción */
+    background-size: 100% 100%; /* o 100% 100% para mantener la proporción */
     background-repeat: no-repeat; /* para evitar que se repita la imagen */
       
 }
