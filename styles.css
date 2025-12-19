@@ -1,42 +1,30 @@
-.header {
-    width: 30%;
-    height: 10%;
-    padding-bottom: 5px;
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: first baseline;
-    border-radius: 150%;
+/* Fondo */
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.body {
-    width: 100%;
-    align-items: center;
-    list-style-type: none;
-    background-image: url("Patagonia.jpg");
-    background-size: 100% 100%; /* o 100% 100% para mantener la proporción */
-    background-repeat: no-repeat; /* para evitar que se repita la imagen */
-      
+
+/* Imágenes de catálogos */
+.catalogo-img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 20%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
-.buttonJACOFER {
-    background-color: rgb(255, 237, 237);
-    margin: 20px;
+
+.catalogo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
-.buttonMOZART {
-    background-color: black;
-    margin: 20px;
+
+/* Texto */
+h1, footer p {
+  text-shadow: 1px 1px 5px #000;
 }
-.buttonAleba {
-    background-color: black;
-    margin: 20px;
-}
-.buttonBTM {
-    background-color: rgb(194, 195, 196);
-    margin: 20px;
-}
-.buttonElectrocable {
-    background-color: #f5a2a2;
-}
-.buttonElTrebol {
     background-color: #000000;
 }
 .buttonEMTOP {
@@ -295,3 +283,4 @@
 .EMTOP {
     margin-left: 200px;
 }
+
