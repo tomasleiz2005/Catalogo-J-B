@@ -1,5 +1,8 @@
-let img = new Image();
-img.src = 'C:/Users/betye/OneDrive/Escritorio/DW/Catalogos/Patagonia.jpg';
-img.onload = function() {
-  document.body.style.backgroundImage = 'url(' + img.src + ')';
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const img = new Image();
+  img.src = "img/Patagonia.jpg";
+
+  img.onload = () => {
+    document.body.style.backgroundImage = `url('${img.src}')`;
+  };
+});
