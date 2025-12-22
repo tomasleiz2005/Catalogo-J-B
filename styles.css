@@ -1,4 +1,90 @@
-.header {
+/* Configuración General */
+.body {
+    margin: 0;
+    padding: 0;
+    background-image: url("Patagonia.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Navbar Adaptable */
+.ul-navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgb(52, 173, 243);
+    padding: 10px;
+    border-radius: 15px;
+    list-style: none;
+}
+
+.logo-header {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.btn-nav {
+    background: transparent;
+    border: none;
+    font-weight: 900;
+    color: rgb(145, 14, 14);
+    padding: 10px;
+}
+
+/* Texto de Bienvenida */
+.welcome-text p {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 40px 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Carrusel Responsive */
+.carousel-inner {
+    background-color: #000;
+    border-radius: 15px;
+}
+
+.carousel-inner img {
+    max-height: 250px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Grilla de Catálogos (Lo más importante para Responsive) */
+.catalogos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.btn-cat {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-cat img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+}
+
+.btn-cat:hover {
+    transform: scale(1.05);
+}
+
+/* Colores específicos que tenías */
+.btn-aleba { background-color: black; }
+.btn-btm { background-color: #c2c3c4; }
+    .header {
 
 width: 30%;
 
@@ -589,3 +675,4 @@ margin-left: 27px
 margin-left: 200px;
 
     }
+
