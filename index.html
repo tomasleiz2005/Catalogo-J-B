@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     
     <style>
-        /* RESET TOTAL PARA EVITAR ERRORES PREVIOS */
+        /* RESET PARA EVITAR ERRORES DE DISEÑO ANTERIORES */
+        * { box-sizing: border-box; }
         html, body {
             margin: 0 !important;
             padding: 0 !important;
             width: 100% !important;
-            overflow-x: hidden !important; /* Prohibido el scroll horizontal */
-            background: #f0f2f5;
+            overflow-x: hidden !important;
+            background: #001219;
         }
 
-        /* FONDO DE PANTALLA FIJO */
+        /* FONDO FIJO */
         .background-fix {
             position: fixed;
             top: 0; left: 0;
@@ -28,25 +29,25 @@
             z-index: -1;
         }
 
-        /* CONTENEDOR PRINCIPAL */
-        .main-catalog-box {
-            width: 100% !important;
-            max-width: 600px; /* Limita el ancho en PC para que no se estire */
+        .main-box {
+            width: 100%;
+            max-width: 900px;
             margin: 0 auto;
             padding: 10px;
         }
 
-        /* HEADER NUEVO (Sin anchos de 150%) */
+        /* HEADER */
         .new-header {
-            background: rgba(13, 27, 42, 0.95);
+            background: rgba(10, 25, 41, 0.95);
             border-radius: 0 0 20px 20px;
             padding: 15px;
             text-align: center;
             margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
 
         .new-header img {
-            width: 100px;
+            width: 90px;
             border-radius: 50%;
             border: 2px solid #34adf3;
         }
@@ -62,44 +63,49 @@
             background: #34adf3;
             color: white;
             border: none;
-            padding: 8px 15px;
-            border-radius: 15px;
-            font-size: 12px;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 11px;
             font-weight: bold;
+            text-transform: uppercase;
         }
 
         /* BIENVENIDA */
         .text-card {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding: 15px;
             border-radius: 15px;
             text-align: center;
             margin-bottom: 20px;
             font-size: 14px;
+            line-height: 1.4;
             color: #333;
         }
 
-        /* CARRUSEL RESPONSIVE */
+        /* CARRUSEL */
         .carousel {
             border-radius: 15px;
             overflow: hidden;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
         }
 
         .carousel-inner img {
-            height: 180px !important;
+            height: 200px !important;
             width: 100%;
             object-fit: contain;
-            background: black;
+            background: #000;
         }
 
-        /* LA GRILLA DE MARCAS (CORREGIDA AL 100%) */
+        /* GRILLA DE BOTONES (2 columnas en móvil, 4 en PC) */
         .brands-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas en celular */
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-            width: 100%;
+            padding-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(4, 1fr); }
         }
 
         .brand-item {
@@ -109,21 +115,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 12px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
             text-decoration: none !important;
         }
+
+        .brand-item:hover { transform: translateY(-3px); box-shadow: 0 5px 12px rgba(0,0,0,0.2); }
+        .brand-item:active { transform: scale(0.95); }
 
         .brand-item img {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
-        }
-
-        /* EN PC SE VERÁ DE 4 COLUMNAS */
-        @media (min-width: 768px) {
-            .brands-grid { grid-template-columns: repeat(4, 1fr); }
-            .main-catalog-box { max-width: 900px; }
         }
     </style>
 </head>
@@ -131,7 +135,7 @@
 
     <div class="background-fix"></div>
 
-    <div class="main-catalog-box">
+    <div class="main-box">
         
         <header class="new-header">
             <img src="J&B.jpeg" alt="Logo">
@@ -142,8 +146,8 @@
         </header>
 
         <div class="text-card">
-            <p><strong>¡Bienvenidos a J&B!</strong><br>
-            Representaciones de fábricas líderes. Encuentra aquí nuestros catálogos actualizados.</p>
+            <p><strong>¡Bienvenidos a J&B Representaciones!</strong><br>
+            José Dieu y Betina Martinez. Aquí están los catálogos y listas actualizadas. Todos los enlaces se abren en pestaña nueva.</p>
         </div>
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -156,18 +160,39 @@
         </div>
 
         <div class="brands-grid">
-            <a href="Catalogo-ALEBA.pdf" class="brand-item"><img src="Aleba.png"></a>
-            <a href="#BTM" class="brand-item"><img src="BTM.png"></a>
-            <a href="#CablesEcoflex" class="brand-item"><img src="CablesEcoflex.png"></a>
-            <a href="#CalorFlat" class="brand-item"><img src="CalorFlat.png"></a>
-            <a href="#Distritech" class="brand-item"><img src="Distritech.png"></a>
-            <a href="#Electrocable" class="brand-item"><img src="Electrocable.png"></a>
-            <a href="#EMTOP" class="brand-item"><img src="EMTOP.png"></a>
-            <a href="#Inducor" class="brand-item"><img src="Inducor.png"></a>
-            <a href="#KING" class="brand-item"><img src="KING.png"></a>
-            <a href="#Ledvance" class="brand-item"><img src="Ledvance.png"></a>
-            <a href="#Plasticual" class="brand-item"><img src="Plasticual.png"></a>
-            <a href="#Tromen" class="brand-item"><img src="Tromen.png"></a>
+            <a href="Catalogo-ALEBA.pdf" target="_blank" class="brand-item"><img src="Aleba.png"></a>
+            <a href="DISTRIBUCIONES ALEBA_compressed.pdf" target="_blank" class="brand-item"><img src="Aleba.png"></a>
+            <a href="DISTRIBUCIONES.pdf" target="_blank" class="brand-item"><img src="Aleba.png"></a>
+            
+            <a href="Catalogo-BTM.pdf" target="_blank" class="brand-item"><img src="BTM.png"></a>
+            <a href="Catalogo-CablesEcoflex.pdf" target="_blank" class="brand-item"><img src="CablesEcoflex.png"></a>
+            <a href="Catalogo-CalorFlat.pdf" target="_blank" class="brand-item"><img src="CalorFlat.png"></a>
+            <a href="Catalogo-Distritech.pdf" target="_blank" class="brand-item"><img src="Distritech.png"></a>
+            <a href="Catalogo-Electrocable.pdf" target="_blank" class="brand-item"><img src="Electrocable.png"></a>
+            <a href="Catalogo-ElReyDelCable.pdf" target="_blank" class="brand-item"><img src="ElReyDelCable.png"></a>
+            <a href="Catalogo-ElTrebol.pdf" target="_blank" class="brand-item"><img src="ElTrebol.png"></a>
+            <a href="Catalogo-EMTOP.pdf" target="_blank" class="brand-item"><img src="EMTOP.png"></a>
+            <a href="Catalogo-EscalerasLepar.pdf" target="_blank" class="brand-item"><img src="EscalerasLepar.png"></a>
+            <a href="Catalogo-GrupoPramez.pdf" target="_blank" class="brand-item"><img src="GRUPO PRAMEZ.png"></a>
+            <a href="Catalogo-Inducor.pdf" target="_blank" class="brand-item"><img src="Inducor.png"></a>
+            <a href="Catalogo-JACOFER.pdf" target="_blank" class="brand-item"><img src="image.jpg"></a>
+            <a href="Catalogo-JOMA.pdf" target="_blank" class="brand-item"><img src="JOMA.png"></a>
+            <a href="Catalogo-KING.pdf" target="_blank" class="brand-item"><img src="KING.png"></a>
+            <a href="Catalogo-LCDR.pdf" target="_blank" class="brand-item"><img src="LaCasaDelRepuesto.png"></a>
+            <a href="Catalogo-Ledvance.pdf" target="_blank" class="brand-item"><img src="Ledvance.png"></a>
+            <a href="Catalogo-Litex.pdf" target="_blank" class="brand-item"><img src="Litex.png"></a>
+            <a href="Catalogo-MyM.pdf" target="_blank" class="brand-item"><img src="M&M.png"></a>
+            <a href="Catalogo-Marbia.pdf" target="_blank" class="brand-item"><img src="Marbia.png"></a>
+            <a href="Catalogo-McPin.pdf" target="_blank" class="brand-item"><img src="McPin.png"></a>
+            <a href="Catalogo-Morano.pdf" target="_blank" class="brand-item"><img src="Morano.png"></a>
+            <a href="Catalogo-Mozart.pdf" target="_blank" class="brand-item"><img src="mozart.jpg"></a>
+            <a href="Catalogo-Plasticual.pdf" target="_blank" class="brand-item"><img src="Plasticual.png"></a>
+            <a href="Catalogo-PoliArk.pdf" target="_blank" class="brand-item"><img src="PoliArk.png"></a>
+            <a href="Catalogo-Stihl.pdf" target="_blank" class="brand-item"><img src="Stihl.png"></a>
+            <a href="Catalogo-Tavito.pdf" target="_blank" class="brand-item"><img src="Tavito.png"></a>
+            <a href="Catalogo-Treine.pdf" target="_blank" class="brand-item"><img src="Treine.png"></a>
+            <a href="Catalogo-Tromen.pdf" target="_blank" class="brand-item"><img src="Tromen.png"></a>
+            <a href="Catalogo-ZM.pdf" target="_blank" class="brand-item"><img src="Zingueria Moya.png"></a>
         </div>
 
     </div>
@@ -175,4 +200,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
-</html>
+    </html>
+    
