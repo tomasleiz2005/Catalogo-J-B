@@ -1,39 +1,107 @@
-/* Configuración General */
-.body {
-    margin: 0;
-    padding: 0;
-    background-image: url("Patagonia.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+/* Reset básico para que nada se salga de la pantalla */
+* {
+    box-sizing: border-box;
 }
 
-/* Navbar Adaptable */
-.ul-navbar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: rgb(52, 173, 243);
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    background-color: #f4f4f4;
+    font-family: sans-serif;
+}
+
+/* El contenedor principal ahora ocupa el ancho del celular */
+.container {
+    width: 100% !important;
     padding: 10px;
-    border-radius: 15px;
+    margin: 0 auto;
+}
+
+/* Header y Logo */
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0d1b2a; /* Color oscuro como el logo */
+    padding: 15px 0;
+}
+
+.header img {
+    width: 150px; /* Tamaño controlado del logo */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botones del menú */
+.ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
     list-style: none;
 }
 
-.logo-header {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.btn-nav {
-    background: transparent;
+.button {
+    padding: 8px 15px;
+    border-radius: 20px;
     border: none;
-    font-weight: 900;
-    color: rgb(145, 14, 14);
-    padding: 10px;
+    background: #34adf3;
+    color: white;
+    font-weight: bold;
 }
 
+/* Texto de bienvenida */
+.p {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Grilla de Catálogos (AQUÍ ESTÁ EL TRUCO) */
+/* Esto hará que se vean 2 por fila en celular y más en PC */
+.li {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 10px;
+    list-style: none;
+}
+
+/* Estilo para los botones de las marcas */
+.li button {
+    width: 100%;
+    height: 100px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.li img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+/* Corregir el Carrusel para que no sea gigante */
+.carousel-inner {
+    height: auto !important;
+    max-height: 300px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 200px !important;
+    object-fit: contain;
+}
 /* Texto de Bienvenida */
 .welcome-text p {
     color: white;
@@ -675,4 +743,5 @@ margin-left: 27px
 margin-left: 200px;
 
     }
+
 
