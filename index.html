@@ -2,6 +2,184 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Catálogo J&B - Oficial</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <style>
+        /* RESET TOTAL PARA EVITAR ERRORES PREVIOS */
+        html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            overflow-x: hidden !important; /* Prohibido el scroll horizontal */
+            background: #f0f2f5;
+        }
+
+        /* FONDO DE PANTALLA FIJO */
+        .background-fix {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url("Patagonia.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .main-catalog-box {
+            width: 100% !important;
+            max-width: 600px; /* Limita el ancho en PC para que no se estire */
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        /* HEADER NUEVO (Sin anchos de 150%) */
+        .new-header {
+            background: rgba(13, 27, 42, 0.95);
+            border-radius: 0 0 20px 20px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .new-header img {
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid #34adf3;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn-style {
+            background: #34adf3;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* BIENVENIDA */
+        .text-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* CARRUSEL RESPONSIVE */
+        .carousel {
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .carousel-inner img {
+            height: 180px !important;
+            width: 100%;
+            object-fit: contain;
+            background: black;
+        }
+
+        /* LA GRILLA DE MARCAS (CORREGIDA AL 100%) */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas en celular */
+            gap: 12px;
+            width: 100%;
+        }
+
+        .brand-item {
+            background: white;
+            border-radius: 12px;
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-decoration: none !important;
+        }
+
+        .brand-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* EN PC SE VERÁ DE 4 COLUMNAS */
+        @media (min-width: 768px) {
+            .brands-grid { grid-template-columns: repeat(4, 1fr); }
+            .main-catalog-box { max-width: 900px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-fix"></div>
+
+    <div class="main-catalog-box">
+        
+        <header class="new-header">
+            <img src="J&B.jpeg" alt="Logo">
+            <div class="nav-buttons">
+                <a href="#home"><button class="btn-style">HOME</button></a>
+                <a href="#Descuentos"><button class="btn-style">DESCUENTOS</button></a>
+            </div>
+        </header>
+
+        <div class="text-card">
+            <p><strong>¡Bienvenidos a J&B!</strong><br>
+            Representaciones de fábricas líderes. Encuentra aquí nuestros catálogos actualizados.</p>
+        </div>
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active"><img src="Abrasol.png" alt="Abrasol"></div>
+                <div class="item"><img src="Aleba.png" alt="Aleba"></div>
+                <div class="item"><img src="BTM.png" alt="BTM"></div>
+                <div class="item"><img src="CablesEcoflex.png" alt="Cables"></div>
+            </div>
+        </div>
+
+        <div class="brands-grid">
+            <a href="Catalogo-ALEBA.pdf" class="brand-item"><img src="Aleba.png"></a>
+            <a href="#BTM" class="brand-item"><img src="BTM.png"></a>
+            <a href="#CablesEcoflex" class="brand-item"><img src="CablesEcoflex.png"></a>
+            <a href="#CalorFlat" class="brand-item"><img src="CalorFlat.png"></a>
+            <a href="#Distritech" class="brand-item"><img src="Distritech.png"></a>
+            <a href="#Electrocable" class="brand-item"><img src="Electrocable.png"></a>
+            <a href="#EMTOP" class="brand-item"><img src="EMTOP.png"></a>
+            <a href="#Inducor" class="brand-item"><img src="Inducor.png"></a>
+            <a href="#KING" class="brand-item"><img src="KING.png"></a>
+            <a href="#Ledvance" class="brand-item"><img src="Ledvance.png"></a>
+            <a href="#Plasticual" class="brand-item"><img src="Plasticual.png"></a>
+            <a href="#Tromen" class="brand-item"><img src="Tromen.png"></a>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+        </html>
+html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo J&B</title>
     
@@ -255,5 +433,6 @@ e"><img src="Treine.png" alt="Treine" class="imageTreine"></button>
 </li>
 </div>
 </body></html>
+
 
 
